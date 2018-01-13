@@ -1,0 +1,32 @@
+<html>
+    <head>
+     <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+            
+        <script>
+            $(function(){//main
+                var count=0;
+            setInterval(function(){//first parmater what to do
+                count++;
+                $('#counterElement').html(count);
+ 
+                  },1000);
+            });
+        </script>
+
+    
+    </head>
+    <body>
+<h1>HELLO</h1>
+        <br>
+        <h3>this page will update automatically every secend</h3>
+        <hr/>
+        note saved <span id="counterElement">0</span> times
+
+
+       
+    </body>
+
+</html>

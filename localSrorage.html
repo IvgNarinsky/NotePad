@@ -1,0 +1,40 @@
+<html>
+    <head>
+     <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+            
+        <script>
+            $(function(){//main
+                
+                var savedtitle=localStorage['title'];
+                var savednote=localStorage['note'];
+                $('#title').val(savedtitle);
+                $('#note').val(savednote);
+                
+            setInterval(function(){//first parmater what to do
+                var title=$('#title').val();// מחזיר ערך לimput
+                var note=$('#note').val();//id note פונה ל
+                
+                localStorage['title']=title;//like database, array & put in this area our title
+                localStorage['note']=note;//put in this area the note
+                
+ /*console.log(title);//מדפיס ופונה לכתותרת*/ 
+                  },1000);//כל כמה זמן לבצע 
+            });
+        </script>
+
+    
+    </head>
+    <body>
+
+<form><!--טופס-->
+        <input type="text" id="title" /><!--איזור כותרת הטקסט-->
+        <br />
+            <textarea id="note" rows="10" cols="50"></textarea><!--אזור הטקסט שנכתוב בדפדפן-->
+        </form><!--/טופס-->
+       
+    </body>
+
+</html>
